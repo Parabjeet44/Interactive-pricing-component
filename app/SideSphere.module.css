@@ -1,0 +1,72 @@
+.sliderContainer {
+  position: relative;
+  width: 100%;
+  height: 40px;
+  margin: 20px 0;
+}
+
+.sliderTrack {
+  position: absolute;
+  height: 8px;
+  background-color: hsl(224, 65%, 95%);
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 4px;
+}
+
+.sliderTrackFill {
+  position: absolute;
+  height: 8px;
+  background-color: hsl(174, 77%, 80%);
+  border-radius: 4px;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.sliderSphere {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  background-color: hsl(174, 86%, 45%);
+  border-radius: 50%;
+  top: 50%;
+  cursor: pointer;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 15px 30px rgba(0, 255, 231, 0.6);
+  transition: background-color 0.2s;
+  z-index: 2;
+  background-image: url("/icon-slider.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.sliderSphere:hover {
+  background-color: hsl(174, 86%, 40%);
+}
+
+.slider {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 3;
+}
+
+/* Removes default slider styling */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+}

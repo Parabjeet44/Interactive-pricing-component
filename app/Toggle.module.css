@@ -1,0 +1,46 @@
+.toggleContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    size: 30px;
+  }
+  
+  .toggleInput {
+    display: none;
+  }
+  
+  .toggleLabel {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 30px;
+    background-color: hsl(223, 50%, 87%);
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  .toggleButton {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 26px;
+    height: 26px;
+    background-color: white;
+    border-radius: 50%;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  }
+  
+  .toggleInput:checked + .toggleLabel {
+    background-color: hsl(174, 86%, 45%);
+  }
+  
+  .toggleInput:checked + .toggleLabel .toggleButton {
+    transform: translateX(30px);
+  }
+  
+  .status {
+    font-size: 16px;
+    font-weight: 500;
+  }
